@@ -16,9 +16,6 @@ module.exports = {
   },
   ignorePatterns: ['.eslintrc.js'],
   rules: {
-    '@typescript-eslint/interface-name-prefix': 'on',
-    '@typescript-eslint/explicit-function-return-type': 'on',
-    '@typescript-eslint/explicit-module-boundary-types': 'on',
-    '@typescript-eslint/no-explicit-any': 'on',
+    "max-len": ["error", { "code": 150 }]
   },
 };
