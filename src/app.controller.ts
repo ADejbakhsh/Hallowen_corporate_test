@@ -6,10 +6,12 @@ import { Query } from '@nestjs/common';
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-
   @Get('/getFrenchCompanyNumber')
-  async getFrenchCompanyNumber(@Query() query): Promise<string> {
-    const WithName = await this.appService.getFrenchCompanyNumber(query?.name);
-    return `request ${WithName}`;
+  async getFrenchCompanyNumber(@Query() query): Promise<object> {
+    return await this.appService.getFrenchCompanyNumber(
+      query?.name,
+      query?.adress,
+      query?.siren,
+    );
   }
 }
