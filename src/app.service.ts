@@ -8,14 +8,20 @@ const serpiGoogle = 'https://serpapi.com/search.json?engine=google';
 
 @Injectable()
 export class AppService {
-  getHello(): string {
-    return 'Hello World!';
+  // in case someone doesn't read the wiki
+  welcome(): string {
+    return '\
+    This service allow you to get the phone number of a french company.<br>\
+    To make a request use "/getFrenchCompanyNumber" path<br>\
+    specify the name of the company and optionally the adress and siren.<br>\
+    exemple : /getFrenchCompanyNumber?name=$company_name&adress=$adress&siren=$siren<br>\
+    It will return the phone number of the company or an error message in Json format.';
   }
 
   /*
    * @param {string} name - name of the company
    * @param {string} siren - optional siren of the company
-   * @param {string} address - optional of the company
+   * @param {string} adress - optional of the company
    * @return {string} - Phone number of the company or error message
    */
   async getFrenchCompanyNumber(
