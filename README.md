@@ -1,5 +1,5 @@
-# october_test
-L’idée globale : créer une API en Node.js, avec une seule route qui prend en paramètre le nom d’une entreprise française, et qui renvoie en JSON son numéro de téléphone, trouvé sur le web par les moyens de ton choix.
+# Hallowen_corporate_test
+L'objectif général consiste à élaborer une API en utilisant Node.js, disposant d'une unique voie de communication qui accepte en entrée le nom d'une entreprise française et retourne en format JSON son numéro de téléphone, obtenu à partir d'une source web sélectionnée à votre convenance.
 
 
 ## Usage
@@ -7,7 +7,7 @@ This service allow you to get the phone number of a french company.
 To make a request use "/getFrenchCompanyNumber" path
 specify the name of the company and optionally the address and siren.
 
-exemple : /getFrenchCompanyNumber?name=$company_name&adress=$adress&siren=$siren
+exemple : /getFrenchCompanyNumber?adress=$adress&siren=$siren&name=$company_name
 
 It will return the phone number of the company or an error message in Json format.
 
